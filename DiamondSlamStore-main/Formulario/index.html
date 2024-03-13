@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StylesIndex.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Diamond Slam Store</title>
+</head>
+<body>
+<div class="Conteiner">
+
+    <nav>
+        <img src="Images/LogoTiendaElegido.png" class="logo" width="250px" height="250px">
+        <ul id="menuList">
+            <li><a class="enlace" href="Login.html">Iniciar Sesión</a></li>
+            <li><a class="enlace" href="Login.html">Registrate</a></li>
+            <li><a class="enlace" href="Productos.html">Tienda</a></li>
+        </ul>
+        <button class="Btn"><img src="Images/LogoElegido.png" width="80px" height="80px" onclick= toggleMenu()></button>
+    </nav>
+
+    <section class="Presentacion">
+        <H2>Primero que nada... ¡Una presentación!</H2>
+        <p>"Diamond Slam" es un proyecto creado por [PLACEHOLDER] y desarrollado por [PLACEHOLDER]. "Diamond Slam" es (o sera) un videojuego de peleas 2D con distintos formatos
+        Diamond Slam contara con un gameplay frenetico, facil de aprender pero desafiante de dominar, una plantilla de diversos personajes listos para la batalla, y mas.</p>
+        <p>El objetivo de la "Diamond Slam Store" es ayudar a reunir fondos para financiar el proyecto mediante la venta de mercancia del mismo, diseñada por el creador del videojuego
+        [PLACEHOLDER]. Ademas, al crear una cuenta, seras parte de la comunidad y podras ver adelantos, avances, artes conceptuales y mas contenido que no podras ver en ningun otro lado.</p>
+        <H3>¡Gracias por visitarnos!</H3>
+        <p>(Las imagenes mostradas a continuacion son meramente ilustrativas y pueden no asemejarse al producto final.)</p>        
+    </section>
+    <section class="ImgContainer">
+        <div class="SliderWrapper">
+            <div class="Slider">
+
+                <img id="Slide1" src="Images/Catalogo1.png">
+                <img id="Slide2" src="Images/Catalogo2.png">
+                <img id="Slide3" src="Images/Catalogo3.png">
+                <img id="Slide4" src="Images/Catalogo4.png">
+                <img id="Slide5" src="Images/Catalogo5.png">
+
+            </div>
+            <div class="SliderNav">
+
+                <a href="#Slide1"></a>
+                <a href="#Slide2"></a>
+                <a href="#Slide3"></a>
+                <a href="#Slide4"></a>
+                <a href="#Slide5"></a>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+    <script>
+
+        var menuList = document.getElementById("menuList");
+        
+        menuList.style.maxHeight = "0px";
+        
+        function toggleMenu() {
+
+            if(menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            }
+
+            else {
+                menuList.style.maxHeight = "0px";
+            } 
+
+        }
+
+    </script>
+
+</body>
+</html>
