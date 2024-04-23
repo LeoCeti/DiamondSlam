@@ -1,8 +1,7 @@
-
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, sans-serif;
     box-sizing: border-box;
 }
 
@@ -18,18 +17,10 @@ nav {
 body {
 
     overflow-x: hidden;
-    
+    background-color: #030716;
 
 }
 
-.logo {
-
-   width: 250px;
-   height: 250px;
-   cursor: pointer;
-   mix-blend-mode: color-burn;
-
-}
 
 .Btn {
 
@@ -66,58 +57,37 @@ nav ul li a {
 
 }
 
-.Conteiner {
-    
+.Header {
+    height: 100px;
     width: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url(Images/Background.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 10px 8%;
+    padding: 0 8%;
+    background-color: #811a28;
+    position: fixed;
+    margin-top: -100px;
+    z-index: 10;
+}
+
+.Header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: x-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, sans-serif;
+    background-color: #811a28;
 
 }
 
-.Cabecera {
-    width: 95%;
-    margin: auto;
-}
+.LogoHeader {
 
+    margin-top: 10px;
+    width: 5%;
+    height: 5%;
 
-.Mision {
-    font-family: sans-serif;
-    font-size: large;
-    color: #34312D;
-    text-align: center;
-    
-}
-
-.Mision h2 {
-    font-family: sans-serif;
-    font-size: xx-large;
-    color: #34312D;
-    text-align: center;
-}
-
-.Vision {
-    font-family: sans-serif;
-    font-size: large;
-    color: #34312D;
-    text-align: center;
-    
-}
-
-.Vision h2 {
-    font-family: sans-serif;
-    font-size: xx-large;
-    color: #34312D;
-    text-align: center;
 }
 
 .enlace {
 
-    color: #ffff;
+    color: #fffafa;
     padding: 0.5rem;
     position: relative;
 
@@ -129,7 +99,7 @@ nav ul li a {
     position: absolute;
     width: 100%;
     height: 2px;
-    background: #ffff;
+    background: #fffafa;
     border-radius: 5px;
     transform: scaleX(0);
     transition: all 0.6s ease;
@@ -149,153 +119,146 @@ nav ul li a {
 
 }
 
-@media only screen and (max-width: 600px) {
+
+.Conteiner {
     
-    nav ul {
-
-        width: 100%;
-        background: linear-gradient(to right, #ff105f,#ffad06);
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
-
-    }
-
-    nav ul li {
-
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-    }
-
-    .Btn {
-
-        display: block;
-
-    }
-
-    #menuList {
-
-        overflow: hidden;
-        transition: 0.5s;
-
-    }
-
-
-}
-
-.ImgContainer {
-
-    padding: 2rem;
-
-}
-
-.SlideWrapper {
-
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-
-}
-
-.Slider {
-
+    margin-top: 400px;
+    padding: 10px 8%;
+    font-size: x-large;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, sans-serif;
     display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: p 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border: 0.5;
-
+    flex-direction: row;
 }
 
-.Slider img {
-
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-    animation: slide 10s infinite alternate;
-
-}
-
-@keyframes Slider {
-    0% {
-        transform: translateX(0); 
-    }
-    33% {
-        transform: translateX(-100%); 
-    }
-    66% {
-        transform: translateX(-200%); 
-    }
-    100% {
-        transform: translateX(0); 
-    }
-}
-
-.ImgContainerb {
-
-    padding: 2rem;
-
-}
-
-.SlideWrapperb {
-
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-
-}
-
-.Sliderb {
-
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: p 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border: 0.5;
-
-}
-
-.Sliderb img {
-
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-    animation: slide 10s infinite alternate;
-
-}
-
-@keyframes Sliderb {
-    0% {
-        transform: translateX(0); 
-    }
-    33% {
-        transform: translateX(-100%); 
-    }
-    66% {
-        transform: translateX(-200%); 
-    }
-    100% {
-        transform: translateX(0); 
-    }
+.ImagenPresentacion {
+    
+    margin-top: -200px;
+    width: 80%;
+    height: auto;
+    margin-left: -200px;
+    order: 1;
+    z-index: 1;
 }
 
 .Presentacion {
 
-text-align: center;
-line-height: 1.5;
+    margin-right: 50px;
+    position: absolute;
+    order: 2;
+    text-align: right;
+    z-index: 2;
+    text-align: right;
+    line-height: 1.5;
+    color: #fffafa;
 
 }
+
+
+
 
 .Disclaimer {
     
     font-size: smaller;
+    text-align: right;
+    z-index: 2;
 
 }
+
+.Personajes {
+    
+    position: relative;
+    margin-top: 100px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #030716), url('Images/Fondo.jpg');    
+    background-size: cover;
+    background-position: center;
+
+}
+
+.LogoPortada {
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.CharacterLeft1, .CharacterLeft2, .CharacterLeft3 {
+    
+    position: relative;
+    width: calc(33.333% - 10px);
+    height: auto;
+    margin-right: 0px;
+    margin-top: 20px;
+
+
+}
+
+
+
+.CharacterLeft1 {
+
+    position: absolute;
+    top: -50px;
+    width: 35%;
+    height: auto;
+    margin-left: 0px;
+
+}
+
+.CharacterLeft2 {
+
+    position: relative;
+    width: 20%;
+    height: auto;
+    margin-top: 485px;   
+
+}
+
+.CharacterLeft3 {
+
+    position: relative;
+    width: 28%;
+    height: auto;
+    margin-left: -40px;
+
+}
+
+.CharacterRight1, .CharacterRight2, .CharacterRight3 {
+    position: relative;
+    width: calc(33.333% - 10px);
+    height: auto;
+    margin-left: 0px; 
+    margin-top: 20px;
+}
+
+.CharacterRight1 {
+    position: absolute;
+    top: -60px;
+    width: 40%;
+    height: auto;
+    right: 0; 
+}
+
+.CharacterRight2 {
+
+    position: relative;
+    width: 22%;
+    height: auto;
+    margin-top: 475px;
+    margin-left: 124px;   
+
+}
+
+.CharacterRight3 {
+
+    position: absolute;
+    width: 24%;
+    height: auto;
+    right: 0;
+    margin-top: 413px;
+
+}
+
 

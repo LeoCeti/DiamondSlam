@@ -11,7 +11,7 @@
 
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)), url(Images/Background.jpg);
+    background-color: #011222;
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -66,8 +66,9 @@
 
 .SocialIcons {
 
-    margin: 30px auto;
+    margin: auto;
     text-align: center;
+
 
 }
 

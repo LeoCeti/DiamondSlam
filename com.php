@@ -1,7 +1,7 @@
 <?php
 
     $server = "localhost";
-    $data = "DSStore";
+    $data = "dsstore";
     $user = "root";
     $pass = "";
 
