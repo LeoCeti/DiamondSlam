@@ -1,10 +1,13 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StylesIndex.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="icon" href="Images/LogoElegido.png" type="image/x-icon">
     <title>Diamond Slam</title>
@@ -15,8 +18,13 @@
         <nav>
             <img src="Images/LogoElegido.png" class="LogoHeader">
             <ul>
-                <li><a class="enlace" href="Productos.html">Tienda</a></li>
-                <li><a class="enlace" href="Login.html">Inicia Sesión/Registrate</a></li>  
+            <?php
+                if (isset($_SESSION["UsernameLogin"])){
+                echo '<li><a href="database">' . $_SESSION["UsernameLogin"] . '</a></li>';
+                    }
+            ?>
+                <li><a class="enlace" href="databaseProductos.php">Tienda</a></li>
+                <li><a class="enlace" href="Logout.php">Cerrar Sesión</a></li>  
             </ul>
         </nav>
     </div>
@@ -44,7 +52,6 @@
         <section><H3>¡Gracias por visitarnos!</H3>
             <section class="Disclaimer"><p>(Las imagenes mostradas a continuacion son meramente ilustrativas y pueden no asemejarse al producto final.)</p></section>     
         </section></section>
-   
 
     </div>
 
@@ -52,6 +59,6 @@
 
     </div>
 
-
 </body>
 </html>
+

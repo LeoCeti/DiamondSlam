@@ -8,6 +8,7 @@ $sql = mysqli_query ($com,"INSERT INTO usuarios(Username, Mail, Passwordd) value
 
 if($sql){
     echo "Usuario Registrado";
+    Header("Location:inicio.php");
 }else{
     echo "Error al registrar";
 }
