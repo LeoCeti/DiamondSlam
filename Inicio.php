@@ -23,7 +23,7 @@ session_start();
                 echo '<li><a href="database">' . $_SESSION["UsernameLogin"] . '</a></li>';
                     }
             ?>
-                <li><a class="enlace" href="databaseProductos.php">Tienda</a></li>
+                <li><a class="enlace" href="AdminCheck.php">Tienda</a></li>
                 <li><a class="enlace" href="Logout.php">Cerrar Sesión</a></li>  
             </ul>
         </nav>

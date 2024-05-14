@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nuevo Producto</title>
+</head>
+<body>
+    <h1>Agregar Nuevo Producto</h1>
+    <form action="databaseProductosAdmin.php" method="post">
+        <label for="ImagenProducto">URL de la imagen:</label><br>
+        <input type="text" id="ImagenProducto" name="ImagenProducto"><br>
+        <label for="DescripcionProducto">Descripción:</label><br>
+        <textarea id="DescripcionProducto" name="DescripcionProducto" rows="4" cols="50"></textarea><br>
+        <label for="NombreProducto">Nombre:</label><br>
+        <input type="text" id="NombreProducto" name="NombreProducto"><br>
+        <label for="PrecioProducto">Precio:</label><br>
+        <input type="text" id="PrecioProducto" name="PrecioProducto" step="0.01"><br><br>
+        <input type="submit" value="Agregar Producto">
+    </form>
+    <a href="ProductosAdmin.html">Ver Productos</a>
+</body>
+</html>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +16,14 @@
         <nav>
             <img src="Images/LogoTiendaButterfly.png" class="LogoHeader">
             <ul class="NavLinks">
-                <li><a class="enlace" href="Login.html">Iniciar Sesión</a></li>
-                <li><a class="enlace" href="Login.html">Registrate</a></li>
-                <li><a class="enlace" href="index.html">Inicio</a></li>  
+            <?php
+        if (isset($_SESSION['nombre_usuario'])) {
+            echo '<li><span class="usuario">' . $_SESSION['UsernameLogin'] . '</span></li>';
+        }
+            ?>
+                <li><a class="enlace" href="index.html">Inicio</a></li>
+                <li><a class="enlace" href="Logout.php">Cerrar Sesión</a></li>  
+                  
             </ul>
         </nav>
     </div>
@@ -89,12 +98,5 @@
         </div>
 
     </section>
-
-    <script>
-        $(".menu-btn").click(function() {
-            $(".navbar .menu").toggleClass("active");
-            $(".menu-btn i").toggleClass("active");
-        });
-    </script>
 </body>
 </html>
